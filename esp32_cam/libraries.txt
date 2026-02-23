@@ -1,0 +1,8 @@
+# Arduino 库依赖 - 在 Arduino IDE 的 工具->管理库 中安装
+
+# 1. esp32-camera (Arduino ESP32 板卡自带)
+# 2. ESPAsyncWebServer - https://github.com/me-no-dev/ESPAsyncWebServer
+# 3. AsyncTCP - ESPAsyncWebServer 的依赖
+# 4. ArduinoJson - https://github.com/bblanchon/ArduinoJson
+# 5. AsyncJson - https://github.com/bblanchon/ArduinoJson (需支持 AsyncCallbackJsonWebHandler)
+#    若无法安装 AsyncJson，可改用项目中的备用 body 解析实现

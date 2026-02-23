@@ -1,0 +1,21 @@
+# Flutter
+app/.dart_tool/
+app/.packages
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+
+# Android
+app/android/.gradle/
+app/android/local.properties
+app/android/**/gradle-wrapper.jar
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Arduino
+esp32_cam/build/
+*.elf
+*.bin
