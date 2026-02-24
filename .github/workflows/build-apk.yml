@@ -28,14 +28,15 @@ jobs:
       - name: Accept Android licenses
         run: yes | flutter doctor --android-licenses
 
-      - name: Generate platform code
-        run: flutter create . --project-name face_pillow_app
+      - name: Generate Android/iOS platform code
+        run: flutter create . --project-name face_pillow_app --platforms=android
         working-directory: app
 
       - name: Enable HTTP for ESP32
         run: |
           MANIFEST=app/android/app/src/main/AndroidManifest.xml
-          sed -i 's/<application/<application android:usesCleartextTraffic="true" /' "$MANIFEST" || true
+          grep -q "usesCleartextTraffic" "$MANIFEST" || \
+          sed -i 's/<application/<application android:usesCleartextTraffic="true" /' "$MANIFEST"
 
       - name: Install dependencies
         run: flutter pub get
